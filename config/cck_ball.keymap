@@ -68,7 +68,7 @@
         F_layers {
             bindings = <
 &kp F12  &kp F1  &kp F2  &kp F3          &kp F4          &kp F5  &kp F6     &kp F7     &kp F8          &kp F9           &kp F10       &kp F11
-&kp A    &kp A   &none   &none           &none           &trans  &none      &none      &none           &kp EQUAL        &kp CARET     &kp MINUS
+&kp A    &none   &none   &none           &none           &trans  &none      &none      &none           &kp EQUAL        &kp CARET     &kp MINUS
 &trans   &none   &none   &none           &none           &trans  &mkp LCLK  &mkp RCLK  &trans          &kp TILDE        &kp ASTERISK  &trans
 &trans   &trans  &trans  &trans          &trans          &none   &none      &none      &kp LEFT_BRACE  &kp RIGHT_BRACE  &none         &trans
 &trans   &trans  &trans  &kp LANGUAGE_2  &kp LANGUAGE_1  &mo 0   &mkp LCLK  &mkp RCLK  &trans          &trans           &trans        &trans
@@ -112,7 +112,7 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,,,
+                // 编码器1：上下滚动,,,,,
                 <&scroll_horizontal_encoder>;
 
             // 编码器2：左右滚动
