@@ -4,7 +4,6 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -68,10 +67,10 @@
         F_layers {
             bindings = <
 &kp F12  &kp F1  &kp F2  &kp F3          &kp F4          &kp F5  &kp F6     &kp F7     &kp F8          &kp F9           &kp F10       &kp F11
-&kp A    &none   &none   &none           &none           &trans  &none      &none      &none           &kp EQUAL        &kp CARET     &kp MINUS
+&kp A    &kp BACKSLASH   &kp NON_US_BACKSLASH   &none           &none           &trans  &none      &none      &none           &kp EQUAL        &kp CARET     &kp MINUS
 &trans   &none   &none   &none           &none           &trans  &mkp LCLK  &mkp RCLK  &trans          &kp TILDE        &kp ASTERISK  &trans
 &trans   &trans  &trans  &trans          &trans          &none   &none      &none      &kp LEFT_BRACE  &kp RIGHT_BRACE  &none         &trans
-&trans   &trans  &trans  &kp LANGUAGE_2  &kp LANGUAGE_1  &mo 0   &mkp LCLK  &mkp RCLK  &trans          &trans           &trans        &trans
+&trans   &trans  &trans  &kp LANGUAGE_2  &kp LANGUAGE_1  &mo 0   &mkp LCLK  &mkp RCLK  &trans          &trans           &trans        &bootloader
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -81,8 +80,8 @@
             bindings = <
 &trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp POUND   &kp DOLLAR  &kp PERCENT  &kp AMPERSAND  &kp SQT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp W
 &trans  &trans           &trans             &trans      &trans      &trans       &trans         &trans   &trans                &trans                 &trans     &trans
-&trans  &bt BT_CLR_ALL   &trans             &trans      &trans      &trans       &trans         &trans   &trans                &trans                 &trans     &trans
-&trans  &trans           &trans             &bt BT_CLR  &trans      &trans       &bt BT_NXT     &trans   &trans                &trans                 &trans     &trans
+&trans  &trans           &trans             &trans      &trans      &trans       &trans         &trans   &trans                &trans                 &trans     &trans
+&trans  &trans           &trans             &trans      &trans      &trans       &trans         &trans   &trans                &trans                 &trans     &trans
 &trans  &trans           &trans             &trans      &trans      &trans       &trans         &trans   &trans                &trans                 &trans     &trans
             >;
 
@@ -118,14 +117,5 @@
             // 编码器2：左右滚动
         };
 
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
     };
 };
